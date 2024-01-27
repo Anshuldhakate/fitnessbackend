@@ -19,7 +19,7 @@ app.get("/", (req, res)=>{
 
 
 
-app.listen(3001,async()=>{
+app.listen(3000,async()=>{
    try{
     await connection
     console.log("connected to DB")
