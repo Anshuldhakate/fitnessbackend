@@ -1,8 +1,11 @@
 const express= require("express")
 const connection= require("./db")
 const {userRouter}= require("./Routes/user.routes")
-// const {noteRouter}= require("./routes/note.routes")
+const cors = require('cors');
 
+
+// const {noteRouter}= require("./routes/note.routes")
+app.use(cors());
 const app= express();
 
 app.use(express.json())
@@ -15,7 +18,7 @@ app.get("/", (req, res)=>{
 
 
 
-app.listen(3000,async()=>{
+app.listen(3001,async()=>{
    try{
     await connection
     console.log("connected to DB")
